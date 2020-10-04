@@ -1,0 +1,1087 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap');
+/*Start global CSS*/
+:root {
+    --main-color: rgb(236, 52, 84);
+    --sec-color: rgb(22, 192, 79);
+    --main-font: 'Cairo', sans-serif;
+}
+
+body {
+    color: var(--main-color);
+    font-family: var(--main-font);
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+img {
+    max-width: 100%;
+}
+
+a, i, button {
+    background: transparent;
+    border: none !important;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    cursor: pointer;
+    transition: .3s all;
+}
+
+input, select {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+a:hover, 
+i:hover, 
+button:hover {
+    opacity: .9 !important;
+}
+
+a:focus, 
+i:focus, 
+button:focus {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.global-link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.btn-link {
+    background: linear-gradient(to bottom, #a20a4a, #d22550);
+    color: #fff;
+    border-radius: 2rem;
+    padding: .3rem 2rem;
+}
+
+.btn-link:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.content-select i,
+.search-btn {
+    color: var(--main-color);
+    position: absolute;
+    top: 50%;
+    left: 1.3rem;
+    transform: translateY(-50%);
+}
+
+.content-select i {
+    left: 1.8rem;
+}
+
+/*End global CSS*/
+
+/************ Start navigation ***************/
+nav{
+    background: #ececec;
+}
+
+nav form .search-btn{
+    left: .3rem;
+}
+
+nav .navbar-brand img{
+    width: 4.5rem;
+}
+
+nav .navbar-nav{
+    text-align: end;
+}
+
+nav .navbar-nav .nav-item.active .nav-link{
+    color: var(--main-color); 
+}
+/*Start media query*/
+@media screen and (max-width: 767px) {
+    nav .navbar-nav {
+        text-align: center;
+        padding: 0 .5rem;
+    }
+    nav .form{
+        display: none;
+    }
+}
+/************** End nav ******************/
+
+/***************** Start header ****************/
+header {
+    background: url(../images/header.jpg) no-repeat;
+    background-size: cover;
+    min-height: 85vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+header .title-header .text-logo {
+    display: inline-flex;
+    position: relative;
+    font-size: 6rem;
+    font-weight: 600;
+    transform: rotateZ(-17deg);
+    margin-top: 2.3rem;
+}
+
+header .title-header .text-logo .entity {
+    font-weight: 400;
+    font-size: 3.5rem;
+    transform: rotate(35deg);
+    margin: -1rem -2rem;
+}
+
+header .title-header .text-header {
+    font-size: 1.7rem;
+}
+
+header .btn-header {
+    background: linear-gradient(to bottom, #a20a4a, #d22550);
+    color: #fff;
+    border-radius: 2rem;
+    padding: .3rem 2rem;
+}
+
+header .btn-header img {
+    width: 2rem;
+}
+
+/*************** End header ********************/
+
+/***************** Start favor restaurant ***********/
+.favor-restaurant{
+    background: url(../images/favor-bg.png) no-repeat;
+    background-size: cover;
+}
+
+.favor-restaurant h2{
+    color: #191919;
+    font-weight: 600;
+}
+
+.favorite-restaurant form input,
+.favorite-restaurant form select{
+    border-radius: 1rem;
+}
+
+.card-restaurant{
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.4rem rgba(0, 0, 0, .1);
+}
+
+.card-restaurant .img-restaurant img{
+    width: 10rem
+}
+
+.card-restaurant .details-restaurant h3{
+    font-weight: 800;
+}
+
+.rate{
+    position: relative;
+    float: left;
+    height: 2.875rem;
+    padding: 0 1rem;
+    z-index: 1500;
+}
+
+.rate:not(:checked) > input{
+    position:absolute;
+    top:-9999px;
+}
+
+.rate:not(:checked) > label{
+    float: left;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 1.875rem;
+    color:#270444;
+}
+
+.rate label:nth-of-type(3),
+.rate label:nth-of-type(4),
+.rate label:nth-of-type(5){
+    color: var(--main-color)
+}
+
+.rate:not(:checked) > label:before{
+    content: "★ ";
+}
+
+.rate > input:checked ~ label{
+    color: var(--main-color);    
+}
+
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label{
+    color: var(--main-color);  
+}
+
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label{
+    color: var(--main-color);
+}
+
+.card-restaurant .details-restaurant .prices{
+    color: #191919;
+}
+
+
+.card-restaurant .open-close .open{
+    color: var(--sec-color);
+    font-size: 3.5rem;
+    opacity: 1;
+}
+
+.restaurant-details .open-close .word{
+    color: #191919;
+    font-size: 1.2rem
+}
+
+/*Start media query*/
+@media screen and (max-width: 750px){
+    .card-restaurant{
+        flex-direction: column;
+    }
+
+    .details-info-rest .title{
+        margin: 1rem auto;
+    }
+}
+/************** End favor restaurant *****************/
+
+/******************** Start offer ******************/
+.offer .offer-info{
+    background: url(../images/offers-bg.jpg) no-repeat;
+    background-size: cover;
+    border-radius: 1.5rem;
+    color: #fff;
+}
+
+.offer .offer-info p{
+    line-height: 2.2;
+    font-size: 1.5rem;
+}
+/**************** End offers *****************/
+
+/******************** Start download-app ***************/
+.download-app{
+    background: url(../images/app-bg.png) no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.download-app-info p{
+    font-size: 2rem;
+}
+
+.download-app-info a{
+    display: inline-block;
+    background: url(../images/rest-bg.jpg) no-repeat;
+    background-size: cover;
+    padding: .5rem 5rem;
+    margin-top: 2.2rem;
+    border-radius: .75rem;
+    color: #fff;
+}
+
+.download-app-info a i{
+    color: #fff;
+    font-size: 1.8rem;
+    vertical-align: middle;
+}
+/******************* End download-app *****************/
+
+/***************** Start footer ******************/
+footer{
+    background: url(../images/footerbg.png) no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.footer-info h3 img{
+    width: 2.5rem;
+}
+
+.footer-info p{
+    padding: 0 0 0 15%;
+    line-height: 2;
+}
+
+.footer-info .social-icon a{
+    color: #fff;
+}
+
+.footer-info .social-icon a:hover{
+    text-decoration: none;
+}
+
+.footer-logo {
+    text-align: end;
+}
+
+.footer-logo img {
+    width: 15rem;
+}
+
+@media screen and (max-width: 767px) {
+    .footer-info {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-info p {
+        padding: 0 1rem;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+}
+/************* End footer **************/
+
+/***Start pages***/
+/*Start global css page*/
+textarea {
+    resize: none;
+    border: none !important;
+}
+
+textarea:focus {
+    box-shadow: none !important;
+}
+
+.add-new form {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 1px .1rem rgba(0, 0, 0, .4);
+}
+
+.form-pages input,
+.form-pages select,
+.form-pages textarea {
+    border-radius: .7rem !important;
+    background: #f3f3f3 !important;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-pages input::placeholder,
+.form-pages select,
+.form-pages textarea::placeholder{
+    color: #dee0de !important;
+}
+
+.ui-datepicker{width: initial;}
+
+.btn-submit {
+    background: linear-gradient(to top, #a20a4a, #d22550);
+    color: #fff;
+    border-radius: .7rem;
+    padding: 0.4rem 4rem;
+}
+
+.card{
+    border-radius: 2.5rem;
+}
+
+.card .card-img-top{
+    border-radius: 2rem;
+}
+
+.card-body .card-text,
+.card-foot i{
+    color: rgba(0, 0, 0, .4);
+}
+
+.card .card-foot  img{
+    width: 1.5rem;
+    transition: all .3s;
+}
+
+.card:hover .card-foot img{
+    opacity: .8;
+}
+
+.card .close-icon{
+    position: absolute;
+    color: #000;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 .2rem rgba(0, 0, 0, .4);
+    top: .5rem;
+    right: .6rem;
+    opacity: 1;
+    font-size: 2.5rem;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.card .close-icon:hover{
+    color: red;
+}
+
+.register{
+    background: url(../images/register.png) no-repeat;
+    background-size: cover;
+}
+
+/****************** Start seller-page ******************/
+.nav-icon-user{
+    cursor: pointer;
+}
+
+.nav-icon-user .icon-link::after{
+    content: '';
+    position: absolute;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: .5rem;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    transition: all .3s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.nav-icon-user:hover .icon-link,
+.nav-icon-user .icon-link:hover{
+    opacity: .9;
+    color: var(--main-color)
+}
+
+.nav-icon-user:hover .icon-link::after{
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav-icon-user .drop-menu{
+    min-width: 13rem;
+    background: #fff;
+    top: 2rem;
+    right: -50%;
+    z-index: 1000;
+    overflow-x: hidden;
+    transition: all .2s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.nav-icon-user:hover .drop-menu{
+    visibility: visible;
+    opacity: 1;
+}
+
+.drop-menu-content .menu-item{
+    background: #fff;
+    transition: all .2s;
+}
+
+.drop-menu-content .menu-item:hover{
+    background: var(--main-color);
+}
+
+.drop-menu-content .menu-item a,
+.drop-menu-content .menu-item i{
+    color: #191919;
+    font-size: 1rem;
+}
+
+.drop-menu-content .menu-item:hover a,
+.drop-menu-content .menu-item:hover i{
+    color: #fff;
+}
+
+.drop-menu-content .menu-item:hover a{
+    transform: translateX(-.3rem)
+}
+
+/********************** Start header ********************/
+.header-seller{
+    background-image: url(../images/rest-bg.jpg);
+}
+
+.logo-resturant img{
+    width: 12rem;
+    box-shadow: .9rem 0 -.1rem  rgba(17, 17, 17, .2);
+    border-radius: 100%;
+}
+
+.rate-resturant{
+    background: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 0 .1rem rgb(236, 52, 84);
+}
+/********************* End header ************************/
+
+/********************** Start food-menu ******************/
+.food-menu{
+    background: url(../images/favor-bg.png) no-repeat;
+    background-size: cover;
+}
+/********************* End food-menu *********************/
+
+/********************** End seller-page ******************/
+
+/********************** Start resturant-page **************/
+.food-menu .card .btn-card {
+    display: inline-block;
+    width: 70%;
+    font-size: 1.2rem;
+    background: linear-gradient(to top, rgb(162, 10, 74), #d22550);
+    text-align: center;
+    border-radius: .6rem;
+    box-shadow: 0 1px .1rem rgba(0, 0, 0, .4);
+    padding: .7rem 0;
+}
+/***************** End resturant-page *****************/
+
+/************** Start offer-page ****************/
+.offer-page .sub-head{
+    border-right: 3px solid #000;
+    padding: 1rem .9rem;
+}
+
+.btn-add-content .btn-add{
+    padding: .3rem 3.5rem;
+    background: linear-gradient(to top, #a20a4a, #d22550);
+}
+
+.card-offer-content {
+    height: 18rem;
+    margin-top: 1rem;
+}
+
+.card-offer-content img{
+    width: 100%;
+    height: 100%;
+}
+
+.card-offer-content,
+.card-offer-content img{
+    border-radius: .9rem;
+}
+/****************** End offer-page ****************/
+
+/*************** Start add-new-offer **************/
+.add-new-offer form{
+    background: #ececec;
+}
+
+form .choose-file label{
+    height: 3rem;
+    box-shadow: 0 1px .1rem rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+form .choose-file input{
+    display: none;
+}
+
+form .choose-file label img{
+    max-height: 100%;
+}
+
+form .choose-file h6{
+    color: #191919;
+}
+
+.input-date input{
+    background: #e5e5e5;
+}
+
+.input-date input::placeholder{
+    color: #191919 !important
+}
+
+.input-date label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1rem;
+    color: #191919;
+}
+/*************** End add-new-offer ************/
+
+/*************** Start login *****************/
+.form-regist .image-user{
+    width: 7rem;
+    height: 7rem;
+}
+
+.form-regist .image-user,
+.form-regist .image-user img{
+    border-radius: 50%;
+}
+
+.form-regist .image-user img{
+    width: 100%;
+    height: 100%;
+}
+
+.regist-forget a{
+    font-size: 1rem;
+}
+
+.btn-register{
+    display: inline-block;
+    padding: .7rem 2rem;
+    background: linear-gradient(to top, rgb(162, 10, 74), #d22550);
+    color: #fff;
+    border-radius: .7rem;
+    font-size: 1.2rem;
+}
+
+.btn-register:hover{
+    color: #fff;
+    opacity: .8;
+}
+/******************** End login *******************/
+
+/*************** Start sign-up *******************/
+.notes{
+    font-size: .6rem;
+    color: #191919;
+    text-align: start;
+    margin-right: 7%;
+}
+
+.notes a{
+    font-size: .7rem;
+}
+/***************** End sign-up *******************/
+
+/*************** Start register-seller*****************/
+.select-content label{
+    top: 40%;
+    transform: translateY(-50%);
+    left: 3rem;
+    font-size: 1.7rem;
+    color: #191919
+}
+/**************** End register-seller *******************/
+
+/****************** Start my-account ******************/
+.my-account{
+    background: initial;
+}
+
+.my-account .form-pages{
+    background: linear-gradient(to top, #a20a4a, #d22550);
+}
+
+.image-user img{
+    cursor: pointer;
+}
+
+.image-user input{
+    display: none;
+}
+
+.my-account .form-pages input,
+.my-account .form-pages select{
+    border-radius: 2rem !important;
+}
+
+.btn-save{
+    background: #270444;
+    border-radius: 2rem;
+}
+/*************** End my-account **************************/
+
+/******************* Start contact-us ******************/
+.contact-us form h5{
+    color: #fff;
+}
+
+.options-radio{
+    color: #fff;
+}
+
+.options-radio label{
+    cursor: pointer;
+}
+
+.options-radio input{
+    display: none;
+}
+
+.options-radio input[type=radio]:checked ~ .circle{
+    color: #270444
+}
+
+.options-radio .circle{
+    vertical-align: middle;
+    padding: 0 .5rem;
+}
+/******************* End contact-us *********************/
+
+/**************** Start shopping-car **************/
+.shopping-car{
+    background: url(../images/cart-bg.png) no-repeat;
+    background-size: cover;
+    color: #191919
+}
+
+.form-remove{
+    background: #fff;
+    box-shadow: 0 1px .5rem rgba(0, 0, 0, .3);
+    border-radius: 1rem;
+}
+
+.form-remove .image-car img{
+    width: 9rem;
+    height: 8rem;
+}
+
+.data-info-car p{
+    margin-bottom: .2rem;
+}
+
+.amount-input{
+    width: 3.5rem;
+    display: inline-flex;
+}
+
+.amount-input input{
+    background: #ececec;
+    
+}
+
+.amount-input input:focus{
+    background: #ececec;
+}
+
+.amount-input .icon{
+    left: 0.5rem;
+    top: 0.5rem;
+    color: var(--main-color);
+}
+
+.btn-clear{
+    background: var(--main-color);
+    color: #fff;
+    padding: .3rem 2rem;
+    margin: 2rem 0 1rem 0;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    box-shadow: 0 1px .5rem rgba(0, 0, 0, .3);
+}
+
+.btn-clear i{
+    color: #fff;
+    padding: 0 .2rem;
+    font-size: 1.1rem;
+}
+/***************** End shopping-cart **************/
+
+/*!-- Start orders-currnet --*/
+.orders .nav-orders {
+    background: var(--main-color);
+}
+
+.orders .nav-orders .nav-pills .nav-link {
+    color: #fff;
+    background-color: initial;
+    padding: 1rem .5rem;
+    border-bottom: 3px solid transparent !important;
+}
+
+.orders .nav-orders .nav-pills .nav-link.active {
+    color: #fff;
+    background-color: initial;
+    border-bottom: 3px solid #270444 !important;
+    border-radius: initial;
+}
+
+.orders .card-orders {
+    background: #ececec;
+    border-radius: .3rem;
+    box-shadow: 0 1px .5rem rgba(0, 0, 0, .3);
+}
+
+.orders .image-card img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    box-shadow: 0 1px .5rem rgba(0, 0, 0, .3);
+}
+
+.orders .data-info-card p .address {
+    font-size: .9rem;
+}
+
+.orders .data-info-card .btns-card a,
+.orders .data-info-card .btns-card button {
+    display: inline-flex;
+    color: #fff;
+    font-size: 1.1rem;
+    background: var(--main-color);
+    border-radius: 1.5rem;
+    padding: .3rem 1rem;
+    box-shadow: 0 1px .5rem rgba(0, 0, 0, .3);
+}
+
+.orders .data-info-card .btns-card button {
+    background: #009523;
+    padding: .3rem 1.2rem;
+}
+
+/*Start media query*/
+@media screen and (max-width: 575px) {
+    .orders .nav-orders .nav-pills {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .orders .nav-orders .nav-pills .nav-link.active {
+        border-bottom: initial !important;
+    }
+
+    .orders .card-orders {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .orders .image-card {
+        margin-bottom: .5rem;
+    }
+}
+/************** End orders-current **************/
+
+/**************** Start orders-new *************/
+.orders-new .data-info-card .btns-card .btn-refusal {
+    background: #270444;
+}
+/************** End orders-new **************/
+
+/************ Start orders-current-user ***********/
+.orders-current-user .image-card img {
+    border: 1px solid var(--main-color)
+}
+
+.orders-current-user .data-info-card h5 {
+    color: var(--main-color);
+}
+
+.orders-current-user .data-info-card p {
+    color: #a0a0a0;
+}
+
+.orders-current-user .data-info-card .btns-card .btn-refusal {
+    background: var(--main-color);
+}
+/************** End orders-current-user *************/
+
+/********** Start meal-page **************/
+/***** Start meal *****/
+.meal {
+    background: url(../images/meal-bg.jpg) no-repeat;
+    background-size: contain;
+    color: #270444;
+}
+
+.details-meal {
+    text-align: start;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.details-meal > div {
+    display: flex;
+    align-items: center;
+}
+
+.details-meal > div img {
+    width: 2rem
+}
+
+.details-meal > div i {
+    font-size: 2rem;
+    color: rgba(0, 0, 0, .6);
+    cursor: none;
+}
+
+.details-meal .deliver i {
+    font-size: 1.5rem
+}
+
+.meal .btn-add {
+    color: #fff;
+    background: linear-gradient(0deg, #a20a4a, #d22550);
+    padding: .3rem 6rem 0 0;
+    border-radius: .8rem;
+    box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .2);
+}
+
+.meal .btn-add i {
+    color: #dee0de;
+    transform: rotate(-30deg);
+    font-size: 1.8rem;
+}
+
+.info-store i {
+    width: 2.6rem;
+    height: 2.6rem;
+    color: #fff;
+    font-size: 2.6rem;
+    background: #191919; 
+    border-radius: 50%;
+}
+
+.info-store .text {
+    color: var(--main-color)
+}
+/******End meal *******/
+
+/**** Start rating-user ****/
+.rating-user .title {
+    border-right: 2px solid #270444;
+}
+
+.rating-user .num-rating {
+    color: #270444
+}
+
+.card-rating-user {
+    background: #ececec;
+    border-radius: .5rem;
+}
+
+.card-rating-user .name {
+    font-size: .9rem;
+    text-align: start;
+}
+
+/*Start media query*/
+@media screen and (max-width: 767px) {
+    .card-rating-user {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card-rating-user .name {
+        justify-content: center;
+    }
+
+    .card-rating-user .rate {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+/****** End rating-user *****/
+
+/****** Start add-rating ******/
+.add-rating .title {
+    border-right: 2px solid #270444;
+}
+
+.add-rating .add-rating .rate {
+    background: #ececec;
+    box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .2);
+}
+
+.add-rating .add-rating textarea,
+.add-rating .add-rating textarea:focus {
+    box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .2) !important;
+    border-radius: 1rem;
+}
+/************** End add-rating ************/
+
+/************* Start more-meal **********/
+.more-meal .title {
+    border-right: 2px solid #270444;
+}
+
+.content-carousel {
+    background: #f79a8e;
+}
+
+.content-carousel .content,
+.content-carousel .content .image,
+.content-carousel .content .image img {
+    min-width: 10rem;
+    height: 17rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.content-carousel .text {
+    text-align: center;
+    color: #fff;
+    top: 50%;
+    right: -50%;
+    transform: translate(50%, -50%);
+    z-index: 100;
+    transition: all .3s;
+}
+
+.content-carousel .text .details {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.content-carousel .content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    transition: all .3s;
+}
+
+.content-carousel .content:hover .text {
+    right: 50%;
+}
+
+.content-carousel .content:hover::after {
+    right: 0;
+}
+
+.owl-carousel .owl-dots {
+    text-align: center !important;
+}
+
+.owl-carousel button.owl-dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #270444;
+    margin: 1.5rem .2rem 0 .2rem;
+}
+
+.owl-carousel .owl-dot.active {
+    background: rgba(162, 10, 74, 0.5);
+}
+/*************** End more-meal ***************/
+/************* End meal-page **************/
